@@ -67,6 +67,8 @@ This is an important point:  The contexts are nested; First by module, then by c
 
 Ordering of terraform runs.  Each module simply passes the entire collected structure, known as a 'context'.  That context also includes the nested states of any other modules that are part of this component.  
 
+
+# Yaml snibbets - all you need to configure 
 # Independent execution
 
 # Wrappers, the key to ordered execution
