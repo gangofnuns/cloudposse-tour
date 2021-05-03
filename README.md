@@ -63,16 +63,20 @@ A component, in this sense, is a collection of independent modules all of which 
 
 This enforces loose coupling standards and reduces the work required to manage and maintain a large infrastructure, which might contain many subsystems organized into many independent provider accounts, or subdomains.
 
-# Why is a component better than just a bunch of modules?
+# How is a component better?
   
+Do components make your design more loosely coupled? 
+How is a component better than just a bunch of modules?
 
-How does this make modules more loosely coupled?  
-
-Consider how the same situation might work with two terraform modules that use independent tfstates.  
+These are good questions.  Consider how the same situation might work with two terraform modules that use independent tfstates.  
 
 <diagram> 
     
-In this case, if you want module A to get state information from module B, the typical way to do it might be to define a terraform_remote_state data source in module A, which then recovers a few scraps of information from module B. 
+Example:
+
+This case comes up quite a lot in terraform design. For example you have a VPC module, Module A, and a module that provides dynamic subnets, Module B. VPC modules do not change all that often, but occasionally, one might want to add or even restructure the subnets in Module B. 
+
+In this case, if you want module B to get state information from module A, the typical way to do it might be to define a terraform_remote_state data source in module A, which then recovers a few scraps of information from module B. 
 
 This works rather well, however, you must also modify the outputs in Module B on order to provide the necessary info.  
 
@@ -82,11 +86,11 @@ It is far easier to simply check the nested structure provided by both modules t
 
 This is an important point:  The contexts are nested; First by module, then by component, and finally by stack.   
 
+# Independent execution
+
 # Components are organized into Stacks
 
 Ordering of terraform runs.  Each module simply passes the entire collected structure, known as a 'context'.  That context also includes the nested states of any other modules that are part of this component.  
-
-# Independent execution
 
 # Wrappers, the key to ordered execution
 
