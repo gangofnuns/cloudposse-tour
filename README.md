@@ -61,9 +61,21 @@ In addition to modules you define for your own infrastructure, there is also a l
 
 A component, in this sense, is a collection of independent modules all of which can pass around a nested hierarchy of their collected context. A component provides two important functions: First, there's a bit more loose coupling in that each module does not need to predefine a specific remote resource in order to pass its configuration to another module within the same component. In order to retrieve the proper context from another module, you simply query the component module, who is the parent, and ask for one of the other sibling's nested attributes as part of the component's context.  
 
-How does this make modules more loosely coupled?  Consider how the same situation might work with two terraform modules that use independent tfstates.  In this case, if you want module A to get state information from module B, the typical way to do it would be to define a terraform_remote_state data source in module A, which recovers a few scraps of information from module B. This works rather well, however, you must also modify the outputs in Module B on order to provide the necessary info.  What if module B was written by somebody else?  What if you're really not all that familiar with what Module B actually does?  This kind of tight coupling -- getting information about module B requires actively changing module B -- is the heart of a great deal of needless effort in remote state management.  It is far easier to simply check the nested structure provided by both modules to find the needed data for Module A.  In this scenario, using dependency inversion, there is no need to rewrite Module B.  It already provides all its info to the component's helper modules in the form of a nested configuration variable called "context".  By reading the context provided by the component's helper modules, Module A can get all the information it needs. 
+How does this make modules more loosely coupled?  
 
-This is an important point:  The contexts are nested; First by module, then by component, finally by stack.   
+Consider how the same situation might work with two terraform modules that use independent tfstates.  
+
+<diagram> 
+    
+In this case, if you want module A to get state information from module B, the typical way to do it might be to define a terraform_remote_state data source in module A, which then recovers a few scraps of information from module B. 
+
+This works rather well, however, you must also modify the outputs in Module B on order to provide the necessary info.  
+
+What if module B was written by somebody else?  What if you're really not all that familiar with what Module B does?  This kind of tight coupling -- that is, getting information about module B requires actively changing module B -- is at the heart of a great deal of needless effort in remote state management.  
+
+It is far easier to simply check the nested structure provided by both modules to find the needed data for Module A. Using the Principle of Dependency Inversion, there is no need to rewrite Module B.  It already provides all its info to the component's helper modules in the form of a nested configuration variable called "context".  By reading the context provided by a component's helper modules, Module A can get all the information it needs without the need to change Module B. 
+
+This is an important point:  The contexts are nested; First by module, then by component, and finally by stack.   
 
 # Components are organized into Stacks
 
