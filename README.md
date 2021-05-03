@@ -117,6 +117,12 @@ How does Cloudposse achieve this independent ordering?  In short, it's done thro
 
 # Other Tools
 
+# managing roles (and secrets) securely
+## aws-vault
+## aws-okta
+## aws2saml
+## Chamber
+
 # Creating your own package repository
 
 # BUILDING a multi-account architecture
