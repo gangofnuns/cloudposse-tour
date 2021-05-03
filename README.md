@@ -111,6 +111,8 @@ Before we dive into the implementation of all these components into a self-conta
 # [Variant2](https://github.com/mumoshu/variant2/) - the wrapper library
 
 ## [Vendir](https://carvel.dev/vendir/docs/latest/sync/)
+## [Syncing with Carvel](https://carvel.dev/vendir/docs/latest/sync/)
+Calling all C++ gurus -- a missing piece, when it comes to caching... 
 
 # The anatomy of a wrapper 
 
