@@ -131,7 +131,7 @@ Before we dive into the implementation of all these components into a self-conta
 ## aws2saml
 ## Chamber
 
-# Creating your own package repository
+# Creating your own [package repository](https://github.com/cloudposse/packages)
 
 # BUILDING a multi-account architecture
 
