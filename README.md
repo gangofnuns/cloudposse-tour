@@ -6,7 +6,7 @@
 
 # Orientation
 
-These notes were created during my initial spin up on the Cloudposse framework of tools and techniques.  They assume you have a basic understanding of the common tools in use by devops professionals, such as terraform and Docker, and provides tutorial links to some of the newer tools introduced by the framework, such as variant2.  
+These notes were created during my initial spin up on the Cloudposse framework of tools and techniques in early 2021.  They assume you have a basic understanding of the common tools in use by devops professionals, such as terraform and Docker, and provides tutorial links to some of the newer tools introduced by the framework, such as variant2.  Please note that these tools may have evolved since the writing, and that I make no guarantees as to the accuracy of this document moving forward.
 
 The framework makes heavy use of [Docker](https://docker-curriculum.com/), and 
 [GNU make](https://www.gnu.org/software/make/manual/make.html), often as a way to remove the complexity of installing and maintaining state across [dozens of tools](./tools.md) which may or may not be familiar to every potential user. 
