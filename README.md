@@ -86,7 +86,11 @@ It is far easier to simply check the nested structure provided by both modules t
 
 This is an important point:  The contexts are nested; First by module, then by component, and finally by stack.   
 
-# Independent execution
+# A note about Ordering, and Independent execution
+
+Before we get too much deeper into the subject of organizing modules into components, and components into stacks, it's worth taking a second to talk about another aspect of loose coupling -- independent execution.  Components and their module constituents are generally managed as a single contiguous tfstate. That is to say, when you build a component, you update it via a single terraform run.  Any state that the component manages is recorded as a single, independent tfstate file, written to the s3 bucket it uses for managing its own state. 
+
+By contrast, stacks are composed of multiple components. Hence, it may take several terraform runs, one per component, and in a particular order, to achieve the build out of an entire stack.  
 
 # Components are organized into Stacks
 
