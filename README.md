@@ -90,13 +90,19 @@ This is an important point:  The contexts are nested; First by module, then by c
 
 Before we get too much deeper into the subject of organizing modules into components, and components into stacks, it's worth taking a second to talk about another aspect of loose coupling -- independent execution.  Components and their module constituents are generally managed as a single contiguous tfstate. That is to say, when you build a component, you update it via a single terraform run.  Any state that the component manages is recorded as a single, independent tfstate file, written to the s3 bucket it uses for managing its own state. 
 
-By contrast, stacks are composed of multiple components. Hence, it may take several terraform runs, one per component, and in a particular order, to achieve the build out of an entire stack.  
-
 # Components are organized into Stacks
 
-Ordering of terraform runs.  Each module simply passes the entire collected structure, known as a 'context'.  That context also includes the nested states of any other modules that are part of this component.  
+By contrast, stacks are composed of multiple components. Hence, it may take several terraform runs, one per component, and in a particular order, to achieve the build out of an entire stack.
+
+A typical component might be a VPC, an ElasticSearch cluster, or an RDS Cluster.  By contrast, a typical stack might define all the systems for an entire AWS account.  If a stack defines, for example, an entire AWS account, then it might well include first a VPC definition (hence, an independent tfstate), then an RDS cluster definition, and finally, let's say, an application cluster of some sort. 
+
+Each of these would be defined as a separate component, with a superimposed ordering:  To build a this stack, you must first have a VPC, and then an RDS Cluster, before you can finally spin up the application cluster.  The ordering is important here, as well as the three independent Terraform runs required to complete the stack. 
 
 # Wrappers, the key to ordered execution
+
+How does Cloudposse achieve this independent ordering?  In short, it's done through the use of sophisticated wrapper tools, which can run terraform multiple times, using different configuration sets per run, and in a specific order (or even with parallel ordering, in some cases).  This is the world of wrappers such as Atmos, which we will visit shortly.  
+
+# Geodesic - The handy toolbox
 
 # Variant2 - the wrapper library
 
@@ -106,7 +112,6 @@ Ordering of terraform runs.  Each module simply passes the entire collected stru
 
 # How to build a custom wrapper
 
-# Geodesic - The handy toolbox
 
 # Putting it all together
 
