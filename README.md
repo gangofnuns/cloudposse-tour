@@ -100,9 +100,13 @@ Each of these would be defined as a separate component, with a superimposed orde
 
 # Wrappers, the key to ordered execution
 
-How does Cloudposse achieve this independent ordering?  In short, it's done through the use of sophisticated wrapper tools, which can run terraform multiple times, using different configuration sets per run, and in a specific order (or even with parallel ordering, in some cases).  This is the world of wrappers such as Atmos, which we will visit shortly.  
+How does Cloudposse achieve this independent ordering?  In short, it's done through the use of sophisticated wrapper tools, which can run terraform multiple times, using different configuration sets per run, and in a specific order (or even with parallel ordering, in some cases).  This is the world of wrappers such as Atmos, which we will visit shortly, and the extraordinary library for defining these wrapper workflows, known as [Variant2](https://github.com/mumoshu/variant2/).
 
 # Geodesic - The handy toolbox
+
+Before we dive into the implementation of all these components into a self-contained, intuitive suite of tools, let's talk for a second about the central organizing framework for these tools, known as Geodesic. 
+
+
 
 # Variant2 - the wrapper library
 
@@ -112,10 +116,11 @@ How does Cloudposse achieve this independent ordering?  In short, it's done thro
 
 # How to build a custom wrapper
 
-
 # Putting it all together
 
 # Other Tools
+## How docker containers help organize.
+## The prevalent use of GNU make
 
 # managing roles (and secrets) securely
 ## aws-vault
