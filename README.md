@@ -133,6 +133,8 @@ Before we dive into the implementation of all these components into a self-conta
 
 # Creating your own [package repository](https://github.com/cloudposse/packages)
 ## Creating an [alpine package](https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package).
+## [Managing an Alpine package repository](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management)
+## Creating a Cloudpossee [mini-release](https://github.com/gangofnuns/atmos/releases/tag/v0.17.2-beta.1)
 
 # BUILDING a multi-account architecture
 
