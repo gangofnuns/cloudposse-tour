@@ -132,6 +132,7 @@ Before we dive into the implementation of all these components into a self-conta
 ## Chamber
 
 # Creating your own [package repository](https://github.com/cloudposse/packages)
+## Creating an [alpine package](https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package).
 
 # BUILDING a multi-account architecture
 
