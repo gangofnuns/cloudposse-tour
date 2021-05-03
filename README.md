@@ -85,15 +85,19 @@ Ordering of terraform runs.  Each module simply passes the entire collected stru
 
 # Wrappers, the key to ordered execution
 
-# Atmos
+# Variant2 - the wrapper library
 
-# Variant2 and the anatomy of a wrapper 
+# The anatomy of a wrapper 
+
+# Atmos - cloudposse's default wrapper
 
 # How to build a custom wrapper
 
 # Geodesic - The handy toolbox
 
-# Building a custom wrapper
+# Putting it all together
+
+# Other Tools
 
 # Creating your own package repository
 
@@ -103,6 +107,6 @@ Ordering of terraform runs.  Each module simply passes the entire collected stru
 
 # Where to find help.
 
-# How to contribute
+# How to contribute.
 
 # Reference
