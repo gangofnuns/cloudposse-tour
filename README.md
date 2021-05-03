@@ -20,19 +20,19 @@ In principle, Dependency Inversion tends to make existing components more reusab
 ## Examples from terraform
 Separation of configuration and code can be achieved in more modern versions of terraform (0.13 and above) by passing variables into a module that are not just strings, numbers, or lists, but rather large maps of configuration data, nested many layers deep. 
 
-In fact, it is possible to describe an entire configuration for something as intricate as an RDS cluster, or a VPN, by simply passing in that configuration as a single nested variable.  Because the data being passed into the module is complex in structure, the process of building the data structure is referred to as "deep merging".  This is because the larger data structure is often reated by merging in many smaller data structures. More on this in a moment, when we talk about "components" and "stacks". 
+In fact, it is possible to describe an entire configuration for something as intricate as an RDS cluster, or a VPN, by simply passing in that configuration as a single nested variable.  Because the data being passed into the module is complex in structure, the process of building the data structure is referred to as "deep merging".  This is because the larger data structure is often created by merging many smaller data structures. More on this in a moment, when we talk about "modules", "components", and "stacks". 
 
 Passing in nested data allows us to restructure modules so that they expect this kind of configuration, and such that they require very little else.  [Many of the Cloudposse terraform modules](https://github.com/cloudposse/terraform-aws-components) have already been restructured to accomodate this principle, and still more are being written every day.  
 
 ## Anatomy of a cloudposse module
 To accomodate the passing in of structured data, let's take a look at [a specific example](https://github.com/cloudposse/terraform-yaml-stack-config/tree/main/modules/env). The 'terraform-yaml-stack-config' is a basic blueprint for a Cloudposse module that anyone can use to create a pluggable piece of infrastructure. 
 
-Notice that there are a [handful of helper sub-modules](https://github.com/cloudposse/terraform-yaml-stack-config/tree/main/modules) under the modules directory in this Github repository.  These helper sub-modules are a general pattern that helps define how data gets passed into and out of any module that makes use of  the cloudposse framework. Let's take a look at one: 
+Notice that there are a [handful of helper sub-modules](https://github.com/cloudposse/terraform-yaml-stack-config/tree/main/modules) under the modules directory in this Github repository.  These helper sub-modules implement a general pattern that helps define how data gets passed into and out of any module that makes use of  the cloudposse framework. When you build a new module, you do it in a template that includes these submodules.  Let's take a look at one, to see what is happening: 
 
 
 https://github.com/cloudposse/terraform-yaml-stack-config/tree/main/modules/vars
 
-The 'vars' module is a helper module which defines the structure of the nested data that is to be passed into this module, and is returned in the output of this module.  NOTE: In this case, the module that we are building has all of these sub-modules predefined as part of its scaffolding. You do not have to write these helper modules, you merely include them as part of your own infrastructure module. 
+The 'vars' submodule is a helper module which defines the structure of nested data that is to be passed into your module, and is returned in the output of your module.  NOTE: In this case, the module that we are building has all of these helper modules predefined as part of its scaffolding. You do not have to write these helper modules, you merely include them as part of your own infrastructure module. 
 
 Also note that modules return deeply nested data structures as **outputs** as well as accepting them as inputs. This is so their configuration can be passed as a general pattern to other modules, and other parts of the infrastructure that may require this data.  This general pattern, shared by all modules, helps to achieve the goal of loose coupling. 
 
@@ -53,7 +53,7 @@ Also note that modules return deeply nested data structures as **outputs** as we
 
 Notice the variable called "context".  It is exposed from an internal variable called "this.context", which contains the nested data structure that encapulates all your module's configuration. It also includes some special data structures, such as a component tag -- a standardized way to define each resource spun up as part of your infrastructure. 
 
-There are two other important variables here:  One called "stack" and another called "component".  We'll talk about these next/
+There are two other important variables here:  One called "stack" and another called "component".  We'll talk about these next.
 
 # Modules are organized into Components
 
