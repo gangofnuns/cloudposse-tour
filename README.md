@@ -1,7 +1,7 @@
 # Cloudposse: A Guided Tour
 
 > Hey all --<br> 
-> I've been having great fun of late playing with the Cloudposse tool set which you have so generously made available. It dawned on me that a few notes might help others orient themselves to this sophisticated and inspired framework for spinning up a breathtaking variety of infrastructure at scale. I've been impressed by the number labor-saving features it seems to layer together.  As I am still a rank novice, please feel free to point out any errors in my assumptions. I feel lucky to have discovered this system at such an early moment in its developmental life cycle.  Looking forward to great things! <br> 
+> I've been having great fun of late playing with the Cloudposse tool set which you have so generously made available. It is a sophisticated and inspired framework for spinning up a breathtaking variety of infrastructure at scale. I've been impressed by the number labor-saving features it seems to layer together.  I'm hoping that these notes might help others orient themselves. As I am still a rank novice, please feel free to point out any errors in my assumptions. I feel lucky to have discovered this system at such an early moment in its developmental life cycle.  Looking forward to great things! <br> 
 >       -- mslayton 2021-04-28<br>
 
 # Orientation
