@@ -144,9 +144,11 @@ Defining workflows in yaml.
 # BUILDING a multi-account architecture
 
 # Organizing (and building) a large reference architecture
-
-# Where to find help.
-
-# How to contribute.
+(Should be its own tree of documents.)
 
 # Reference
+## GUIDE to importing packages into the Cloudposse framework.
+## How to contribute.
+## Where to find help.
+
+
