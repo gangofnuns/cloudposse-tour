@@ -107,20 +107,21 @@ How does Cloudposse achieve this independent ordering?  In short, it's done thro
 Before we dive into the implementation of all these components into a self-contained, intuitive suite of tools, let's talk for a second about the central organizing framework for these tools, known as Geodesic. 
 
 
+# [Atmos](https://github.com/cloudposse/atmos) - cloudposse's default wrapper
 
 # [Variant2](https://github.com/mumoshu/variant2/) - the wrapper library
 
+# The anatomy of a wrapper 
+## Atmos components 
 ## [Vendir](https://carvel.dev/vendir/docs/latest/sync/)
 ## [Syncing with Carvel](https://carvel.dev/vendir/docs/latest/sync/)
+## [GoReleaser](https://goreleaser.com/quick-start/)
 Calling all C++ gurus -- a missing piece, when it comes to caching... 
 
-# The anatomy of a wrapper 
+# Building custom wrappers, with custom workflows.
 
-# [Atmos](https://github.com/cloudposse/atmos) - cloudposse's default wrapper
-
-# How to build a custom wrapper
-
-Let's start with [Atmos](https://github.com/cloudposse/atmos). 
+Let's start with [Atmos](https://github.com/cloudposse/atmos).
+Defining workflows in yaml.
 
 # Putting it all together
 
