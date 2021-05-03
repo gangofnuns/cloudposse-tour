@@ -57,9 +57,14 @@ There are two other important variables here:  One called "stack" and another ca
 
 # Modules are organized into Components
 
-In addition to modules you define for your own infrastructure, there is also a larger perspective of how modules fit together into entire architectures. There are lots of issues that can thwart how we organize our infrastructure, and so Cloudposse tries to make it easier to fit your modules together into a coherent system.  This enforces loose coupling standards and reduces the work required to manage and maintain a large infrastructure, which might contain many subsystems organized into many independent provider accounts, or subdomains.
+In addition to modules you define for your own infrastructure, there is also a larger perspective of how modules fit together into entire architectures. There are lots of issues that can thwart how we organize our infrastructure, and so Cloudposse tries to make it easier to combine modules together into a coherent system. The first part of that system is how Modules can be combined to form Components.
 
-A component, in this sense, is a collection of independent modules all of which can pass around a nested hierarchy of their collected context. A component provides two important functions: First, there's a bit more loose coupling in that each module does not need to predefine a specific remote resource in order to pass its configuration to another module within the same component. In order to retrieve the proper context from another module, you simply query the component module, who is the parent, and ask for one of the other sibling's nested attributes as part of the component's context.  
+A component, in this sense, is a collection of independent modules all of which can pass around a nested hierarchy of their collected context. A component provides two important functions: First, there's a bit more loose coupling, in that each module does not need to predefine a specific remote resource in order to pass its configuration to another module within the same component. Modules within a component can pass all their configuration data freely.  In order to retrieve the proper context from another module, you simply query the component context, which is the parent to both modules, and ask for one of the other sibling's nested attributes as part of the component's context.
+
+This enforces loose coupling standards and reduces the work required to manage and maintain a large infrastructure, which might contain many subsystems organized into many independent provider accounts, or subdomains.
+
+# Why is a component better than just a bunch of modules?
+  
 
 How does this make modules more loosely coupled?  
 
