@@ -118,6 +118,8 @@ Before we dive into the implementation of all these components into a self-conta
 
 # How to build a custom wrapper
 
+Let's start with [Atmos](https://github.com/cloudposse/atmos). 
+
 # Putting it all together
 
 # Other Tools
