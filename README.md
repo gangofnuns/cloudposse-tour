@@ -8,12 +8,12 @@
 
 These notes were created during my initial spin up on the Cloudposse framework of tools and techniques.  They assume you have a basic understanding of the common tools in use by devops professionals, such as terraform and Docker, and provides tutorial links to some of the newer tools introduced by the framework, such as variant2.  
 
-In addition, the framework makes heavy use of [Docker](https://docker-curriculum.com/), and 
+The framework makes heavy use of [Docker](https://docker-curriculum.com/), and 
 [GNU make](https://www.gnu.org/software/make/manual/make.html), often as a way to remove the complexity of installing and maintaining state across [dozens of tools](./tools.md) which may or may not be familiar to every potential user. 
 
-# Inversion of control 
+# The Dependency Inversion Principle 
 
-The Cloudposse Framework is rooted in the concept of [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control).  This principle (IoC) tries to separate code from configuration wherever possible, which helps to greatly streamline the process of martialing infrastructure by virtue of the fact that many, many code modules for infrastructure resources [have already been written](https://github.com/cloudposse/terraform-aws-components).  
+The Cloudposse Framework is rooted in the [Principle of Dependency Inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle).  This principle tries to improve the loose coupling of components by separating code from configuration wherever possible, which helps to greatly streamline the process of martialing infrastructure by virtue of the fact that many, many code modules for infrastructure resources [have already been written](https://github.com/cloudposse/terraform-aws-components).  
 
 In principle, Inversion of Control tends to make existing components more reusable, and allows the flexible composition of larger infrastructures from those reusable components. IoC emphasizes the idea that components should be loosely coupled, meaning that architectures are built out of layers of indpendent components, each handling their individual concerns separately, and providing well defined boundaries to share configuration details with other components. 
 
