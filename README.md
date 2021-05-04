@@ -109,7 +109,18 @@ Before we dive into the implementation of all these components into a self-conta
 
 # [Atmos](https://github.com/cloudposse/atmos) - cloudposse's default wrapper
 
+The Atmos README.md has a great write up of how to use the wrapper tool, and how to build a series of components into a servicable infrastructure.  It is missing one important piece, which is a few components in the components dir. Otherwise, it is complete.  
+
+The Atmos README.md also walks through the framework in detail, starting with tools like Geodesic and the [GNU make](https://www.gnu.org/software/make/manual/make.html) based [Build Harness](https://github.com/cloudposse/build-harness).
+
+(RE: Build Harness -- IMHO we could use a quick tutorial in using the many nested Makefiles (make help), and modules under .build_harness/modules/.  I will add this to the list. 
+
 # [Variant2](https://github.com/mumoshu/variant2/) - the wrapper library
+
+IMHO, it would be useful to have a procedure for adding a small change to the Atmos wrapper, and pushing it live. 
+
+Here is my best approximation: 
+
 
 # The anatomy of a wrapper 
 ## Atmos components 
