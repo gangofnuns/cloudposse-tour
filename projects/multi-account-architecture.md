@@ -1,19 +1,20 @@
 # The mother of all projects
-This extensive project incorporates many (if not most) of the techniques discussed elsewhere in these tutorials. The idea is ambitious: Produce a kind of "master class" in how to produce a full-blown, multi-account architecture, at scale, using the SweetOps Framework of tools and best practices.
+This rather large project incorporates many (if not most) of the techniques discussed elsewhere in these tutorials. The goal is ambitious: Produce a kind of "master class" describing how to build a full-blown, multi-account architecture, at scale, using the SweetOps Framework tools and best practices.
 
 
-# HIGH-LEVEL OVERVIEW
+# From a high level
 Any big project should be split into phases and navigable. Here's a quick overview. 
 
-# Gather necessary components. 
 
-## prep work
+# prep work
 
-### Gather components
+## Gathering the right components
 
-* Understanding vendir
+* Introduction to vendir
+* Using a vendor file to gather all the proper components. 
 
-### General ramp up
+## General ramp up
+
 * What to read. 
 * You need to know about Geodesic, and Atmos.
     * Go through the 3 online tutorials.
@@ -22,10 +23,15 @@ Any big project should be split into phases and navigable. Here's a quick overvi
 * You need to know about '[deep merging](deep_merging.md)'.
     * Read this [tutorial](projects/deep_merging.md).
 
-### STEP 1 - configure the [tfstate-backend]() component
- * It's important to set up a viable tfstate-backend config, so we'll do this first. It will also be useful for creating multiple components from a single templated example that are reused across stacks. 
+## PHASE 1 - configure the [tfstate-backend]() component
 
- ### STEP 2 - configure [IAM permissions]()
+It's important to set up a viable tfstate-backend config, so let's do this 
+first.  It will also be useful to create multiple components from a single 
+templated example. Deep merging will then allow us to replicate these components 
+across multiple accounts and stacks using only DRY configurations. 
+
+GOALS: 
+## PHASE 2 - configure [IAM permissions]()
 * Next, you will need to know about IAM permissions, saml-based SSO, and role assumption.
 * Important paradigms in use
     * deep merging - the importance of having a DRY config.
