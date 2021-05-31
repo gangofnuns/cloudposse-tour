@@ -1,9 +1,9 @@
 # The mother of all projects
-This rather large project incorporates many (if not most) of the techniques discussed elsewhere in these tutorials. The goal is ambitious: Produce a kind of "master class" describing how to build a full-blown, multi-account architecture, at scale, using the SweetOps Framework tools and best practices.
-
-
-# From a high level
-Any big project should be split into phases and navigable. Here's a quick overview. 
+This rather large project incorporates many (if not most) of the techniques discussed elsewhere 
+in these tutorials. The goal is ambitious: Produce a kind of "master class" describing how to 
+build a full-blown, multi-account architecture, at scale, using the SweetOps Framework tools 
+and best practices. From a high level, any big project should be split into phases for easy 
+navigation. Here's a quick overview. 
 
 
 # prep work
@@ -30,7 +30,18 @@ first.  It will also be useful to create multiple components from a single
 templated example. Deep merging will then allow us to replicate these components 
 across multiple accounts and stacks using only DRY configurations. 
 
-GOALS: 
+### GOALS
+* Create a scratch multi-account environmemnt using AWS Organizations, 
+Organizational Units (OU's), and policies.
+
+* Build a [terraform-aws-tfstate-backend]() component in the master account, 
+using the latest [terraform-aws-yaml-config]() modules. 
+
+* Configure [deep-merging]() such that you can spin up multiple acccounts, each with
+their own unique [tfstate-backend]() and distinctive config, but DRY to the point 
+that all configs use a single code module.
+
+
 ## PHASE 2 - configure [IAM permissions]()
 * Next, you will need to know about IAM permissions, saml-based SSO, and role assumption.
 * Important paradigms in use
