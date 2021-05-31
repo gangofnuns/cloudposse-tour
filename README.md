@@ -10,10 +10,11 @@ A list of example projects to help you spin up on building architectures using t
 ## [Tools](tools.md)
 A reference guide to further reading on the specific tools, features, and techniques employed throughout the SweetOps framework.  Designed to feed the curious.
 
-## [How to's](howto.md)
+## [How to's](howto.md), [Pro Tips](pro_tips.md), and [Gotchas](gotchas.md)
 Notes on how to accomplish specific goals when working on automation and infrastructure.
 
 ## [Community](community.md)
 Specific resources on finding answers, engaging in discussions, and connecting with other builders of architecture and automation. 
-
+* Where to plug into discussions. 
+    * The Cloudposse Slack channel, and weekly office hours podcasts.
 

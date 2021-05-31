@@ -27,25 +27,9 @@ Any big project should be split into phases and navigable. Here's a quick overvi
 
  ### STEP 2 - configure [IAM permissions]()
 * Next, you will need to know about IAM permissions, saml-based SSO, and role assumption.
-    * Important paradigms in use
-        * deep merging - the importance of having a DRY config.
-        * context - how it fits into the picture. 
-            * Where to plug into discussions. 
-                * The Cloudposse Slack channel, and weekly office hours podcasts.
-
-
-### PRO TIPS 
-* Watch the upstream commits.
-* Ask informed questions. 
-* Gotchas - hard lessons learned.
-    * workspace overwrites - these will blow away your state. 
-    * version mismatches - use upstream only.  watch upstream for bugs reported.
-    * Always lint your yaml files. 
-
-                    * account state issues - 
-                * Converting older modules - a guide
-                    * You will inevitably have to convert something old into something new. 
-                * Troubleshooting - how to break things down when there are problems. 
+* Important paradigms in use
+    * deep merging - the importance of having a DRY config.
+    * context - how it fits into the picture. 
 
     * Phase I - Building a multi-account framework
         * Start with a multi-account in AWS.  (tips on how to do this right, with emails, etc.)
