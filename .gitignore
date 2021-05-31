@@ -5,6 +5,10 @@
 *.tfstate
 *.tfstate.*
 
+# vim file turds
+**/*.sw[nopqrs]
+
+
 # Crash log files
 crash.log
 
