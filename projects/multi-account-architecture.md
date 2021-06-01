@@ -15,20 +15,29 @@ navigation. Here's a quick overview.
 
 ## General ramp up
 
-* What to read. 
-* You need to know about Geodesic, and Atmos.
-    * Go through the 3 online tutorials.
-* You need to know about the 'context' pattern. 
-    * Read this [orientation](orientation.md).
+* What you should know before you begin, and where to read about it. 
+
+* You should know about [Geodesic](https://github.com/cloudposse/geodesic), and how to use it as a basic tool
+as part of this tutorial.  
+
+* You should know about [Atmos](https://github.com/cloudposse/atmos), and how to use it as a wrapper when running
+terraform in the Geodesic environment.
+
+* For Geodesic and Atmos above, you should go through [these 3 online tutorials](https://github.com/cloudposse/tutorials).
+    
+* You should know about the 'context' pattern. 
+    * Read this [orientation](orientation.md) doc, which discusses some of the SweetOps design.
+    
 * You need to know about '[deep merging](deep_merging.md)'.
     * Read this [tutorial](projects/deep_merging.md).
 
-## PHASE 1 - configure the [tfstate-backend]() component
+## PHASE 1 - configure the [tfstate-backend]() component, using DRY configs.
 
 It's important to set up a viable tfstate-backend config, so let's do this 
 first.  It will also be useful to create multiple components from a single 
 templated example. Deep merging will then allow us to replicate these components 
-across multiple accounts and stacks using only DRY configurations. 
+across multiple accounts and stacks using DRY configurations. A few nifty
+tips and tricks are added, to make things easier.
 
 ### GOALS
 * Create a scratch multi-account environmemnt using AWS Organizations, 
