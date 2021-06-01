@@ -51,29 +51,34 @@ their own unique [tfstate-backend]() and distinctive config, but DRY to the poin
 that all configs use a single code module.
 
 
-## PHASE 2 - configure [IAM permissions]()
+## PHASE 2 - configure mult-account [IAM permissions]() and saml-based Single Sign-On (SSO)
+
 * Next, you will need to know about IAM permissions, saml-based SSO, and role assumption.
+* Caveats - DO NOT use older remote-state files.  Use the vendir file approach.
+
 * Important paradigms in use
     * deep merging - the importance of having a DRY config.
     * context - how it fits into the picture. 
 
-    * Phase I - Building a multi-account framework
-        * Start with a multi-account in AWS.  (tips on how to do this right, with emails, etc.)
-        * Spin up tfstate-backend in master
-            * (use deep merging)
-            * Caveats - DO NOT use older remote-state files.  Use th vendir file approach.)
-    * Phase II - Creating SSO integration 
-        * Important concepts - role assumption, tagging, etc.  Okta groups mapping to roles.
+        * Managing permissions across multiple accounts
+        * How do cross-account permissions work in AWS?  Why are they important?  
+            * tips on effective strategies, with email accounts, etc.)
+
+* Creating SSO integration 
+        * Important concepts - role assumption, tagging, etc.  
+        * Okta groups mapping to roles.
         * How to structure things. 
       IAM Permissions, etc. 
         * Using the Okta provider.
         * Using aws2saml. 
 
 
-    * Phase III - 
+## Phase 3 - spinning up your first VPC
+
+## Phase 4 - spinning up your first EKS cluster.
+
+
                     
-
-
 
 # Understanding Vendir
 
