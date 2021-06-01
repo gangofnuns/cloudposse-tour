@@ -14,8 +14,7 @@ navigation. Here's a quick overview.
 * Using a vendor file to gather all the proper components. 
 
 ## General ramp up
-
-* What you should know before you begin, and where to read about it. 
+What you should know before you begin, and where to read about it. 
 
 * You should know about [Geodesic](https://github.com/cloudposse/geodesic), and how to use it as a basic tool
 as part of this tutorial.  
