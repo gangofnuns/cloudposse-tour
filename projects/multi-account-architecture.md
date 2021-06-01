@@ -23,7 +23,7 @@ as part of this tutorial.
 * You should know about [Atmos](https://github.com/cloudposse/atmos), and how to use it as a wrapper when running
 terraform in the Geodesic environment.
 
-* For Geodesic and Atmos above, you should go through [these 3 online tutorials](https://github.com/cloudposse/tutorials).
+    * For Geodesic and Atmos above, you should go through [these 3 online tutorials](https://github.com/cloudposse/tutorials).
     
 * You should know about the 'context' pattern. 
     * Read this [orientation](orientation.md) doc, which discusses some of the SweetOps design.
