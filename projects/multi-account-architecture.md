@@ -31,7 +31,7 @@ terraform in the Geodesic environment.
 * You need to know about '[deep merging](deep_merging.md)'.
     * Read this [tutorial](projects/deep_merging.md).
 
-## PHASE 1 - configure the [tfstate-backend]() component, using DRY configs.
+# PHASE 1 - configure the [tfstate-backend]() component, using DRY configs.
 
 It's important to set up a viable tfstate-backend config, so let's do this 
 first.  It will also be useful to create multiple components from a single 
@@ -39,7 +39,7 @@ templated example. Deep merging will then allow us to replicate these components
 across multiple accounts and stacks using DRY configurations. A few nifty
 tips and tricks are added, to make things easier.
 
-### GOALS
+## GOALS
 * Create a scratch multi-account environmemnt using AWS Organizations, 
 Organizational Units (OU's), and policies.
 
@@ -51,7 +51,7 @@ their own unique [tfstate-backend]() and distinctive config, but DRY to the poin
 that all configs use a single code module.
 
 
-## PHASE 2 - configure mult-account [IAM permissions]() and saml-based Single Sign-On (SSO)
+# PHASE 2 - configure mult-account [IAM permissions]() and saml-based Single Sign-On (SSO)
 
 * Next, you will need to know about IAM permissions, saml-based SSO, and role assumption.
 * Caveats - DO NOT use older remote-state files.  Use the vendir file approach.
@@ -73,16 +73,7 @@ that all configs use a single code module.
         * Using aws2saml. 
 
 
-## Phase 3 - spinning up your first VPC
+# Phase 3 - spinning up your first VPC
 
-## Phase 4 - spinning up your first EKS cluster.
-
-
-                    
-
-# Understanding Vendir
-
-
-Use the following [vendir.yaml](https://github.com/gangofnuns/vendir.yaml).
-
+# Phase 4 - spinning up your first EKS cluster.
 
