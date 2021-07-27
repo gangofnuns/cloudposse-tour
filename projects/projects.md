@@ -1,4 +1,10 @@
 # Hands-on projects
+
+Cloudposse has created three excellent tutorials for learning. 
+1.) [The Geodesic DevOps container.](https://github.com/cloudposse/tutorials)
+2.) The Atmos scriptable wrapper (for automating terraform workflows). 
+3.) Building a multi-account environment. 
+
 These are essentially recipes for building various stacks or other reference infrastructures for the purpose of better understanding the tools and techniques at play. 
 
 * Caveat:  None of these projects is considered fully formed at this point. These are all works in progress with no guarantees.
